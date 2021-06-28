@@ -51,6 +51,7 @@ public class StateControl{
         _state.showState();
     }
     public void ChangeState(IState state){
+        System.Console.WriteLine("強制遷移：" + _state.GetType().Name + " → " + state.GetType().Name);
         _state = state;
     }
     public void transit(){
