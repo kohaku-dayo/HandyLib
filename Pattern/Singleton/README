@@ -1,0 +1,13 @@
+Singletonは自身のクラスを返し、static変数として保持することによりクラスが一つだけ存在することを保証するクラス設計です。
+
+public class ASingleton{
+    public static ASingleton aSingleton = new ASingleton();
+    
+    public static Create(){
+        return aSingleton;
+    }
+}
+
+クラスにはSingletonと末尾に記述することによりインスタンス化の阻止が可能。
+new ASingleton();
+と、記述してしまうと、クラスを複数作ってしまうため、自身を返すstaticな関数を実装することによりインスタンス化を阻止。
