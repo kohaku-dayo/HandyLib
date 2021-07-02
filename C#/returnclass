@@ -8,9 +8,19 @@ public class A{
         }
     }
     
+    public static Self{
+        get{
+            return this;
+        }
+    } 
+    
     //関数で返す//
-    public static Create(){
+    public static A Create(){
         return new A();
+    }
+    
+    public A Get(){
+        return this;
     }
     
     
