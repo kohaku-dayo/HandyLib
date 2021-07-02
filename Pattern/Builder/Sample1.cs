@@ -74,3 +74,9 @@ public class BuilderSample{
         return result;
     }
 }
+
+
+/*
+コード参照元↓
+https://zecl.hatenablog.com/entry/20091117/p1
+*/
