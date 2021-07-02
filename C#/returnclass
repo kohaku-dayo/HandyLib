@@ -1,0 +1,17 @@
+クラスの返し方一覧
+
+public class A{
+    //プロパティーで返す//
+    public static Instance{
+        get{
+            return new A();
+        }
+    }
+    
+    //関数で返す//
+    public static Create(){
+        return new A();
+    }
+    
+    
+}
