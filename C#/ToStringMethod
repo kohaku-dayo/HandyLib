@@ -1,0 +1,27 @@
+ToString関数はstring型の値を使用する際に必ず実行される関数です。
+基本的には各クラス内で特有の処理をオーバーライドし、記述します。
+オーバーライドする前のToString関数内にはStringへの変換処理以外には特に定義されていないため、
+独自にカスタマイズするとよい。
+
+実装方法は以下の通り。
+
+public class A{
+    string result = "Hello";
+    public override string ToString(){
+        result += "Hello";
+        result += "Hello";
+        result += "Hello";
+        
+        return result;
+    }
+}
+Console.WriteLine("Hello");
+
+/*
+出力結果
+"Hello"
+"Hello"
+"Hello"
+"Hello"
+*/
+
