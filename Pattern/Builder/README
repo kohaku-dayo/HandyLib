@@ -31,5 +31,7 @@ Builderパターンを実装しているクラスでは情報を得ることが�
 
 上記の制限や使用難易度の高さから基本的にはコンストラクタを用いたクラス内変数の初期化に使用する引数を短縮化させることを目的に使われることが多い。
 
-Builderパターンを内蔵したクラス設計は一つ上のディレクトリ内に存在するSample1.csに記述されているので、例文が見たい方はこちらを参照してください。
-HandyLib/Pattern/Builder/Sample1.cs
+Builderパターン単一で実装する最も簡単な設計はこちらを参照してください。
+HandyLib/Pattern/Builder/Sample_2.cs
+Builderパターンを内蔵したクラス設計はこちらを参照してください。
+HandyLib/Pattern/Builder/Sample_1.cs
