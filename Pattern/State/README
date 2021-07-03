@@ -35,3 +35,5 @@ public class B : IState{
 インターフェースを変数として保持し、その変数が持つ状態遷移関数transit()を呼び出し、自身に代入。
 最後にStateControlクラスのstateControler関数を呼び出すと、自動的に指定されているインターフェース継承クラスを変更することが可能となります。
 この一連の流れを状態と言い表し、これがStateと名付けられた理由です。
+
+サンプルコードは HandyLib/Pattern/State/Sample_1.cs から参照してください。
