@@ -1,0 +1,37 @@
+Stateパターンは状態を表すクラス設計です。
+
+Stateパターンは状態を変更するための関数を定義したインターフェースを複数のクラスに継承することによって、
+状態を変化させていくことが可能です。
+
+例文：
+public class StateControl{
+    IState _state = new A();
+    public void stateControler(){
+        _state = _state.transit();
+    }
+}
+
+public interface IState{
+    IState transit();
+}
+
+public class A : IState{
+    public IState transit(){
+        return new B();
+    }
+}
+
+public class B : IState{
+    public IState transit(){
+        return new A();
+    }
+}
+
+解説：
+インターフェースには状態を変更するための関数定義を行います。
+インターフェースを継承したクラスには状態遷移を行う処理を記述。
+戻り値をインターフェースにして次に呼び出すクラスのインスタンスに設置。
+状態をコントロールするクラスとしてStateControlクラスを作成。
+インターフェースを変数として保持し、その変数が持つ状態遷移関数transit()を呼び出し、自身に代入。
+最後にStateControlクラスのstateControler関数を呼び出すと、自動的に指定されているインターフェース継承クラスを変更することが可能となります。
+この一連の流れを状態と言い表し、これがStateと名付けられた理由です。
