@@ -52,6 +52,7 @@ class File : IEntry{
 
 エントリーインターフェースには以下の関数が定義されます。
 ・ファイルorフォルダーがディレクトリのどの位置に配置されているかを出力するもの public void Output(int depth)
+
 interface IEntry{
 
     void Output(int depth);
