@@ -14,6 +14,7 @@ Compositパターンのクラス内にインターフェースのリストを保
 ・フォルダーのディレクトリ直下にファイルorフォルダーを配置するもの pubic void AddEntry(IEntry entry)
 
 class Folder : IEntry{
+
     string name;
     private List<IEntry> entries = new List<IEntry>();
     
@@ -36,6 +37,7 @@ class Folder : IEntry{
 ・ファイルがディレクトリのどの位置に配置されているかを出力するもの public void Output(int depth)
 
 class File : IEntry{
+
     string name;
     
     public File(string name){
@@ -51,6 +53,7 @@ class File : IEntry{
 エントリーインターフェースには以下の関数が定義されます。
 ・ファイルorフォルダーがディレクトリのどの位置に配置されているかを出力するもの public void Output(int depth)
 interface IEntry{
+
     void Output(int depth);
 }
 
