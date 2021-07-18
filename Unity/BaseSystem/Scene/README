@@ -1,0 +1,2 @@
+SceneSystemはDebugSystemが実装されていることを前提としたスクリプトです。
+未実装の場合は[DebugSystem]()を実装してください。
