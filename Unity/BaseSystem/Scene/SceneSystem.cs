@@ -9,7 +9,7 @@ namespace BaseSystem
 {
     public class SceneSystem
     {
-        public static SceneSystem instance = new SceneSystem();
+        private static SceneSystem instance = new SceneSystem();
         Scene currentScene;
 
         private SceneSystem(){}
@@ -21,13 +21,23 @@ namespace BaseSystem
 
         public enum Type
         {
-            NewRoomMaker,
+            //ここに存在するSceneを全て貼り付けてください。
         }
 
+        /// <summary>
+        /// 現在のシーンを取得します。
+        /// </summary>
+        /// <returns>現在のシーン</returns>
         internal Scene getCurrentScene()
         {
             return currentScene = SceneManager.GetActiveScene();
         }
+        /// <summary>
+        /// シーンをロードします。
+        /// シーンが存在しない場合はエラーメッセージを出力します。
+        /// </summary>
+        /// <param name="Scene">シーンenum</param>
+        /// <returns>SceneSystemを返します。</returns>
         internal SceneSystem loadScene(Type Scene)
         {
             if (SceneManager.GetSceneByName(Scene.ToString()).IsValid()) loadScene(Scene);
